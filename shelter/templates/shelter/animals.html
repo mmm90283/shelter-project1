@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Наши питомцы{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="section-title">Все наши хвостики</h2>
+    <div class="grid">
+        {% for animal in animals %}
+        <div class="card">
+            {% if animal.photo %}
+            <img src="{{ animal.photo.url }}" alt="{{ animal.name }}">
+            {% endif %}
+            <div class="card-info">
+                <h3>{{ animal.name }}, {{ animal.age }}</h3>
+                <p>{{ animal.description }}</p>
+                <p style="color: #94a3b8; font-size: 14px;">
+                    {% if animal.is_adopted %}✅ Уже дома{% else %}❤️ Ищет дом{% endif %}
+                </p>
+                <a href="{% url 'contacts' %}" class="btn">Забрать домой</a>
+            </div>
+        </div>
+        {% empty %}
+        <p style="text-align:center; color:#94a3b8;">Пока нет животных. Добавьте их через админку!</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

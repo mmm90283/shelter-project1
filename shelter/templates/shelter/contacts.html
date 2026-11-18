@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="section-title">Свяжитесь с нами</h2>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="messages">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+
+    <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+        <div class="card" style="flex: 1; min-width: 300px; padding: 30px;">
+            <h3 style="color:#38bdf8; margin-bottom: 20px;">📍 Как нас найти</h3>
+            <p style="color: #cbd5e1; font-size: 18px; margin-bottom: 10px;"><strong style="color:#38bdf8;">Адрес:</strong> г. Воронеж, ул. Зоологическая, д. 15</p>
+            <p style="color: #cbd5e1; font-size: 18px; margin-bottom: 10px;"><strong style="color:#38bdf8;">Телефон:</strong> +7 (999) 123-45-67</p>
+            <p style="color: #cbd5e1; font-size: 18px; margin-bottom: 10px;"><strong style="color:#38bdf8;">Email:</strong> info@verny-drug.ru</p>
+            <p style="color: #cbd5e1; font-size: 18px;"><strong style="color:#38bdf8;">Режим работы:</strong> Ежедневно с 10:00 до 19:00</p>
+        </div>
+
+        <div class="card" style="flex: 1; min-width: 300px; padding: 30px;">
+            <h3 style="color:#38bdf8; margin-bottom: 20px;">✉️ Оставить заявку</h3>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

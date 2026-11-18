@@ -1,0 +1,117 @@
+/* Фон страницы */
+body {
+    background: #201a16 !important;
+    color: #e0dcd7 !important;
+}
+
+/* Шапка сайта */
+#header {
+    background: #2b231e !important;
+    border-bottom: 2px solid #10b981 !important;
+}
+
+#header h1 a, #header h1 a:visited {
+    color: #10b981 !important;
+}
+
+/* Блоки модулей (Животные, Заявки) */
+.module {
+    background: #2b231e !important;
+    border: 1px solid #3a3029 !important;
+}
+
+.module h2, .module caption {
+    background: #10b981 !important;
+    color: #201a16 !important;
+}
+
+/* Таблицы */
+table {
+    background: #201a16 !important;
+    color: #e0dcd7 !important;
+}
+
+th {
+    background: #2b231e !important;
+    color: #10b981 !important;
+}
+
+/* Кнопки */
+.button, input[type=submit], input[type=button] {
+    background: #10b981 !important;
+    color: #201a16 !important;
+    border: none !important;
+}
+
+.button:hover, input[type=submit]:hover {
+    background: #059669 !important;
+}
+
+/* Ссылки */
+a:link, a:visited {
+    color: #10b981 !important;
+}
+
+a:hover {
+    color: #34d399 !important;
+}
+
+/* Поля ввода */
+input, textarea, select {
+    background: #201a16 !important;
+    color: #e0dcd7 !important;
+    border: 1px solid #3a3029 !important;
+}
+
+input:focus, textarea:focus {
+    border-color: #10b981 !important;
+}
+body {
+    background: #201a16 !important;
+    color: #e0dcd7 !important;
+}
+#header {
+    background: #2b231e !important;
+    border-bottom: 2px solid #10b981 !important;
+}
+#header h1 a, #header h1 a:visited {
+    color: #10b981 !important;
+}
+.module {
+    background: #2b231e !important;
+    border: 1px solid #3a3029 !important;
+}
+.module h2, .module caption {
+    background: #10b981 !important;
+    color: #201a16 !important;
+}
+table {
+    background: #201a16 !important;
+    color: #e0dcd7 !important;
+}
+th {
+    background: #2b231e !important;
+    color: #10b981 !important;
+}
+.button, input[type=submit], input[type=button] {
+    background: #10b981 !important;
+    color: #201a16 !important;
+    border: none !important;
+}
+.button:hover, input[type=submit]:hover {
+    background: #059669 !important;
+}
+a:link, a:visited {
+    color: #10b981 !important;
+}
+a:hover {
+    color: #34d399 !important;
+}
+input, textarea, select {
+    background: #201a16 !important;
+    color: #e0dcd7 !important;
+    border: 1px solid #3a3029 !important;
+}
+input:focus, textarea:focus {
+    border-color: #10b981 !important;
+}

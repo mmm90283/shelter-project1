@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero">
+    <h2>Подари дом тому, кто ждёт</h2>
+    <p>Мы заботимся о бездомных животных и ищем для них любящих хозяев. Каждый хвостик заслуживает счастья!</p>
+    <div class="stats">
+        <div class="stat-item"><h3>150+</h3><p>Спасённых жизней</p></div>
+        <div class="stat-item"><h3>45</h3><p>Питомцев в приюте</p></div>
+        <div class="stat-item"><h3>98%</h3><p>Успешных усыновлений</p></div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">Кто ищет дом прямо сейчас</h2>
+    <div class="grid">
+        {% for animal in animals %}
+        <div class="card">
+            {% if animal.photo %}
+            <img src="{{ animal.photo.url }}" alt="{{ animal.name }}">
+            {% endif %}
+            <div class="card-info">
+                <h3>{{ animal.name }}, {{ animal.age }}</h3>
+                <p>{{ animal.description|truncatewords:15 }}</p>
+                <a href="{% url 'contacts' %}" class="btn">Забрать домой</a>
+            </div>
+        </div>
+        {% empty %}
+        <p style="text-align:center; color:#94a3b8;">Пока нет животных. Добавьте их через админку!</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
